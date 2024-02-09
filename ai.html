@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Cherry+Bomb+One&family=Geologica:wght@500&family=Montserrat:ital,wght@0,400;1,900&family=Poppins:ital,wght@0,300;1,100;1,200&family=Raleway&family=Roboto:ital@0;1&family=Source+Code+Pro:ital,wght@1,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+</head>
+<body>
+
+
+    <header id="header" class="header">
+        <nav id="nav" class="nav" >
+            <div class="lgo" style="cursor:pointer">
+                <h2>A.I</h2>
+            </div>
+            <div class="links" id="links">
+                <ul id="unoder">
+                    <li><a href="#main"> Home</a> </li>
+                    <li><a href="#ai">AI</a></li>
+                    <li><a href="#con">Contact</a>  </li>
+                    <li><a href="red.html" id="left">Sign In</a></li>
+
+                </ul>
+                
+            </div>
+            
+            <div class="phone">
+                <img src="https://cdn.icon-icons.com/icons2/2582/PNG/512/menu_icon_153999.png" alt="menu" width="45" height="45" id="menu">
+            </div>
+        </nav>
+        
+        <div class="main" id="main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 id="ch"></h4>
+                        <br>
+                        
+                        <h1>Learn To <br> Code Like Monster</h1>
+                         
+                        <p>rem ipsum dolor sit amet consectetur, adipisicing elit. Expedita numquam animi aliquid dolores beatae rerum sint consequatur atque, veniam vitae? Itaque repellendus vitae, incidunt cupiditate praesentium est sunt atque iste!</p>
+                         <br>
+                        <button type="button" id="down">Try Ai <i class="fa-solid fa-wand-magic-sparkles"></i></button>
+                        <button type="button" id="play"> <i class="fa-solid fa-play"></i> </button>
+                        <br>
+                        
+                    </div>
+                    <div class="col-md-6">
+                        <img src="https://preview.colorlib.com/theme/appco/assets/img/hero/hero_right.png"  width="420" height="345"  class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </header>
+
+    <div class="aimain" id="ai">
+        <div class="container">
+           
+            <div class="row">
+                
+                <div class="col-md-6">
+                    <h1>TEXT TO IMAGE</h1>
+                    <p style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-weight:800" id="anime">enter only limited text ,enter the text you want The Ai  create the given data to image developed by sriram</p>
+                    
+                <div class="form-clas">
+                    
+                    <br>
+                    <input type="text" placeholder="enter your prompt" id="prompt">
+                    <br>
+                    <br>
+                    <button type="button" id="on" onclick="change()">Generate img</button>
+                 
+                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="img-class">
+                    <img src="https://edvancer.in/wp-content/uploads/2023/03/Untitled-design.jpg"  id="imgs" class="img-fluid" alt="Soory InterNet Error ):">
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="con" id="con">
+        <div class="form">
+        <div class="container">
+            <h1>Get Start Make Your Own Ai</h1>
+            <p>Enter your meassge about what performing ai you want we will try that ai!</p>
+        
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="02029de9-c027-4649-b8f2-cb7eebfe047a">
+                
+                    <div class="input-grp">
+                        <input type="text" name="name" placeholder="enter the name" id="nameone" onkeyup="checkname()" required>
+                       
+                        <span id="texterror"></span>
+                        
+                        <input type="email" name="email" placeholder="enter the email" id="emailone"  onkeyup="checkemail()"  required>
+                  
+                        <span id="emailerror"></span>
+                        
+                        <textarea name="message" maxlength="196" placeholder="enter  your meassage" id="meassageone" onkeyup="checkmsg()" required></textarea>
+                  
+                        <span id="msgerror"></span>
+                        <br>
+                        <br>
+
+                        
+                        
+                        <button type="submit" id="sub">Send Msg</button>
+                        
+                        <span id="allcheck"></span>
+
+                        
+                    </div>
+                </div>
+                   
+                
+                </form>
+
+             
+                
+     
+          
+         </div>
+       
+
+
+           
+    
+            
+ 
+       
+
+    <br>
+    <div class="content">
+        <div class="container">
+            <p>&copy; sriram <i><b style="color:#9df314">Generative AI</b></i> sriram Groups of development</p>
+        </div>
+        
+    </div>
+
+    <div class="showerror" id="showerror">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="https://cdni.iconscout.com/illustration/premium/thumb/man-confusing-due-to-no-connection-error-4558763-3780059.png" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <br>
+                    <br>
+                    <p>A network error is a failure in communication between devices or systems within a network. </p>
+                        
+                    <button id="Forretry">
+                        
+                       <i>Retry</i>
+                    </button>
+                    <button id="Forok">
+                        <i>Ok i will check</i>
+                     </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="mainphone">
+    <div class="forphone" id="phone">
+        <li><a href="#main"> Home</a> </li>
+        <li><a href="#ai">AI</a></li>
+        <li><a href="#con">Contact</a>  </li>
+        <li><a href="red.html" id="left">Sign In</a></li>
+    </div>
+
+</div>
+   
+</body>
+</html>
+<script>
+    let nav =document.getElementById("nav")
+    function scrollval(){
+        let scr=scrollY;
+        if(scr < 120){
+            nav.classList.remove("navbg")
+        }
+        else{
+            nav.classList.add("navbg")
+        }
+    }
+    
+    
+    
+    let prom=document.getElementById("prompt")
+    
+    
+    window.addEventListener("scroll" , scrollval)
+    
+    let showerror = document.getElementById("showerror")
+    window.addEventListener("load" ,function(){
+        window.addEventListener("offline",()=>{
+            showerror.style.display="block";
+        });
+    })
+
+    let Forretry =document.getElementById("Forretry")
+    Forretry.addEventListener("click" , ()=>{
+        window.location.reload()
+    })
+    document.getElementById("Forok").addEventListener("click" , ()=>{
+        showerror.style.display="none";
+    })
+    
+    window.addEventListener("online",()=>{
+          showerror.style.display="none";
+            alert("perfect You became online")
+            
+        });
+
+    
+    let img=document.getElementById("imgs")
+    function change(){
+        img.src="https://source.unsplash.com/random/200*200/?" + prom.value;
+        if(prom.value == ""){
+            alert("please enter anything you want!")
+            img.src="https://leoforce.com/wp-content/uploads/2023/04/Talent-Intelligence-Powered-by-AI-The-Future-of-Recruiting-Has-Arrived.webp";
+            update()
+        }
+        else{
+            img.src="https://cdn.dribbble.com/users/543574/screenshots/4824123/ezgif.com-video-to-gif.gif";
+            setTimeout(function(){
+                img.src="https://source.unsplash.com/random/200*200/?" + prom.value;
+            },1000)
+
+         
+        
+           
+        }
+    }
+    
+
+    
+    
+    
+    
+    
+    
+    prom.addEventListener("keypress", function(event) {
+     
+      if (event.key === "Enter") {
+        
+        event.preventDefault();
+        change();
+        setlocal();
+      }
+    });
+    
+    let menu = document.getElementById("menu")
+    let phone = document.getElementById("phone")
+    phone.style.right="-396px";
+    menu.onclick=function(){
+        if(phone.style.right=="-396px"){
+            phone.style.right="0";
+            menu.src="https://static.thenounproject.com/png/481858-200.png";
+            
+        }
+        else{
+            phone.style.right="-396px";
+            menu.src="https://cdn.icon-icons.com/icons2/2582/PNG/512/menu_icon_153999.png";
+        }
+     
+    
+    }
+    let ch=document.getElementById("ch")
+    let body=document.querySelector("body")
+    
+    let date = new Date()
+    let hours = date.getHours()
+    
+    if(hours >=14){
+    
+     ch.innerHTML = "Good Afternoon";
+    
+    }
+    else{
+    ch.innerHTML="Good Moring";
+    
+    }
+    
+    let texterror=document.getElementById("texterror")
+    let emialerror=document.getElementById("emailerror")
+    let msgerror = document.getElementById("msgerror")
+    
+    
+    
+    let namestyle=document.getElementById("nameone")
+    let emailstyle = document.getElementById("emailone")
+    let msgstyle=document.getElementById("meassageone")
+    
+    
+    let sub = document.getElementById("sub")
+    let allcheck =document.getElementById("allcheck")
+    
+    
+        function checkname(){
+            let name=document.getElementById("nameone").value
+            if(name==""){
+                texterror.innerHTML="please enter anything";
+                texterror.style .color="red";
+                namestyle.style.border="1px solid red";
+                namestyle.style.boxShadow="1px 1px 6px red"
+                return false
+                sub.type="button";
+        
+            }
+            
+           if(!name.match(/^[A-Za-z]+$/)){
+                texterror.innerHTML="invalid !!";
+                texterror.style.color="red";
+                namestyle.style.border="1px solid red";
+                namestyle.style.boxShadow="1px 1px 6px red"
+                sub.type="button";
+                return false
+            }
+            else{
+                texterror.innerHTML="Good Value";
+                texterror.style .color="green";
+                namestyle.style.border="1px solid #29f700";
+                namestyle.style.boxShadow="1px 1px 6px #29f700"
+                sub.type="submit";
+                return true;
+            }
+        }
+        
+        function checkemail(){
+            let email=document.getElementById("emailone").value
+          
+            if(email==""){
+                emialerror.innerHTML="please enter anything";
+                emialerror.style .color="red";
+                emailstyle.style.border="1px solid red";
+                emailstyle.style.boxShadow="1px 1px 6px red"
+                sub.type="button";
+                return false
+        
+            }
+                
+           if(!email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
+            emialerror.innerHTML="invalid Email !!";
+            emialerror.style.color="red";
+            emailstyle.style.border="1px solid red";
+            emailstyle.style.boxShadow="1px 1px 6px red"
+            sub.type="button";
+            return false
+        }
+            
+            else{
+                emialerror.innerHTML="Good Value";
+                emialerror.style .color="green";
+                emailstyle.style.border="1px solid #29f700";
+                emailstyle.style.boxShadow="1px 1px 6px #29f700"
+                sub.type="submit";
+                return true;
+            }
+        }
+        
+        
+        function checkmsg(){
+            let meassage=document.getElementById("meassageone").value.trim()
+            let req=35;
+            let distace = req-meassage.length;
+            if(distace>0){
+                msgerror.innerHTML=`YOUR REQURID VALUE ${distace} `;
+                msgerror.style .color="red";
+                msgstyle.style.border="1px solid red";
+                msgstyle.style.boxShadow="1px 1px 6px red";
+                sub.type="button";
+                return false
+                
+        
+            }
+        
+            else{
+                msgerror.innerHTML="Good Value";
+                msgerror.style .color="green";
+                msgstyle.style.border="1px solid #29f700";
+                msgstyle.style.boxShadow="1px 1px 6px #29f700";
+                sub.type="submit";
+                return true;
+            }
+        }
+    
+    sub.addEventListener("click" , function(){
+            
+    
+        if(!checkname() || !checkemail() || !checkmsg()){
+        allcheck.innerHTML="Please fix the  Errors";
+        allcheck.style.color="red";
+        setTimeout(function(){
+            allcheck.innerHTML="";
+        },3000)
+        return false;
+        }
+        else{
+            
+            return true;
+        }
+    
+     
+        
+       
+    }) 
+  
+    
+    gsap.from(".main" , {duration:1,y:"-100%",ease:"bounce"})
+    </script>
+
+<style>
+    nav{
+        width:100%;
+        height: 65px;
+       
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top:0;
+        left:0;
+        z-index: 100;
+        
+
+    }
+    nav .lgo{
+        margin-left: 30px;
+        margin-top: 30px;
+        
+    }
+    nav .lgo a{
+        margin: 2px;
+        text-decoration: none;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: large;
+    }
+    nav .lgo i{
+        color:crimson;
+    }
+    .links{
+        margin-top: 35px;
+        margin-right: 90px;
+    }
+
+    .links li{
+        list-style: none;
+        display: inline;
+        margin: 20px;
+        
+    }
+    .links a{
+        text-decoration: none;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+        margin: 2px;
+        color:#0c0113;
+    }
+     .links #left{
+        width: 50%;
+        padding: 10px 10px;
+        background-color: #000000c0;
+        color:#fff;
+        border-bottom: none;
+     }
+    .links a:hover{
+        border-bottom: 1px solid #040724;
+    }
+    header{
+        width:100%;
+        height: 100vh;
+       
+
+    }
+    .load img{
+        width:100%;
+        height: 100vh;
+        z-index: -1;
+
+    }
+
+   
+    .main h4{
+        margin-top: 140px;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       
+    }
+    .main h1{
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       font-weight: 800;
+       font-size: 60px;
+       color:#040724;
+    }
+    .main button{
+        border: none;
+        outline: none;
+        background: transparent;
+
+    }
+
+    .main p{
+        letter-spacing:1px;
+        word-break: break-all;
+        color: #818181;
+    }
+    
+    .main {
+        margin-top:40px;
+    }
+    .main #down i{
+        opacity: 0;
+    }
+    .main #down{
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 36%;
+        padding: 13px 14px;
+        background-color:#FF004D;
+        border-radius: 20px;
+        color:#ffd;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: ease 0.3s;
+
+    }
+
+    
+    .main #down:hover{
+        border: 1px solid #444343;
+        background: transparent;
+        transition: ease-in-out 0.3s;
+        color:#000;
+
+    }
+    .main #down:hover i{
+        opacity: 1;
+        transition: 0.3s;
+
+    }
+    .main #play{
+        border: none;
+        outline: none;
+        background: transparent;
+        width: 8%;
+        margin-left: 20px;
+        padding: 10px 10px;
+        background-color:#ff00bf;
+        border-radius: 50%;
+        color:#ffd;
+        font-weight: 700;
+        
+    }
+    .main #play:hover{
+        background-color:#18171769;
+    }
+    .main #play:hover i{
+        color:#000000;
+    }
+    .navbg{
+        background-color: #ffffff;
+        
+    }
+    .navbg .lgo{
+        margin-top: 18px;
+        transition: 0.1s;
+    }
+    .navbg .links{
+        margin-top: 25px;
+    }
+    .aimain{
+        margin-top: 150px;
+    }
+   .aimain #imgs{
+    margin-top: -80px;
+    width: 670px;
+    height: 500px;
+    border: 1px solid #333;
+    border-radius: 7px;
+    margin-top: 20px;
+   }
+   .aimain input{
+    border: none;
+    outline: none;
+    border:1px solid #c2c2c2;
+    width: 66%;
+    padding: 20px 30px;
+    border-radius: 20px;
+    background: transparent;
+    
+    
+    color:#000;
+   }
+   .aimain input:hover{
+    border-color: cornflowerblue;
+   
+   }
+   .aimain button{
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 36%;
+    background-color:#FF004D;
+    border-radius: 20px;
+    padding: 10px 10px;
+    color:#fff;
+   }
+   .aimain button:hover{
+    background-color: #ff00bf;
+   }
+   .phone img{
+    display: none;
+   }
+   .forphone{
+    display: none;
+   }
+   .con{
+    margin-top: 100px;
+   }
+   .con h1{
+    font-size: 26px;
+    font-weight: 600;
+
+   }
+   .con input,textarea{
+    margin: 10px;
+    width: 65%;
+    padding: 20px 24px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    
+
+   }
+   .con button{
+    border: none;
+    outline: none;
+    background: transparent;
+    background:#FF004D;
+    padding: 10px 10px;
+    margin-left: 10px;
+    color:#fff;
+   }
+   .content{
+    width:100%;
+    min-height:8vh;
+    padding: 10px 10px;
+    border-radius: 12px 10px 0 0;
+    background-color: #000000c0;
+    COLOR:#FFF;
+    text-align: center;
+   }
+   .showerror{
+    position: fixed;
+    top:10%;
+    left:10%;
+    top:40%;
+    background-color: #ccc;
+    border-radius: 10%;
+    display: none;
+   }
+   .showerror button{
+    margin-top: 100px;
+   }
+  
+
+ 
+
+   @media (max-width:700px) {
+    body{
+        overflow-x: hidden;
+    }
+    .links{
+        display: none;
+    }
+    .lgo img{
+        width: 70px;
+    }
+    .phone img{
+        display: block;
+        margin-top: 20px;
+    }
+    .mainphone #left{
+        width: 30%;
+        padding: 10px 10px;
+        background-color: #000000c0;
+        color:#fff;
+        border-bottom: none;
+        font-size: 20px;
+     }
+   
+    .forphone {
+        display: block;
+        position: fixed;
+        top:0;
+        right:-396px;
+        width: 100%;
+        height: 100vh;
+        margin-top: 100px;
+        padding: 40px 80px;
+        margin-left: 40px;
+       backdrop-filter: blur(9px);
+       border-radius: 20px;
+       transition: 0.7s;
+
+       
+       
+     
+        
+    }
+    .forphone li{
+        list-style: none;
+        margin: 38px;
+        font-size: 28px;
+    }
+    .forphone a{
+        text-decoration: none;
+        color:#000000;
+
+    }
+    .main img{
+        display: none;
+    }
+    .main h1{
+        font-family: monospace;
+        font-size: 46px;
+    }
+    .main #play{
+        width: 10%;
+
+        padding: 10px 10px;
+    }
+    .aimain  img{ 
+        margin-top: 690px;
+        width: 170px;
+        height: 100px;
+        border: 1px solid #333;
+        border-radius: 7px;
+
+    
+    }
+    .aimain h1{
+        margin-top: -20px;
+        font-family: Arial, Helvetica, sans-serif;
+       
+    }
+    .aimain p{
+        word-spacing: 5px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .aimain input{
+        width:88%;
+    }
+    .con input,textarea{
+        width:88%;
+    }
+    .con span{
+        margin-left: 20px;
+    }
+    .con #msgerror{
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .showerror{
+        top:5%;
+        left:3%;
+        top:4%;
+
+    }
+
+
+   }
+
+
+    
+</style>
