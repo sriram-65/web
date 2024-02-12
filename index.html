@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Me</title>
-    <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGYIDa6xA5TCysVsvrYHJAyPsQF_pYIfdrBsPqdYE9nQ&s">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -22,7 +21,7 @@
     <header id="header" class="header">
         <nav id="nav" class="nav" >
             <div class="lgo" style="cursor:pointer">
-                <h2>A.I</h2>
+                <h2 id="changecolor">A.I</h2>
             </div>
             <div class="links" id="links">
                 <ul id="unoder">
@@ -106,8 +105,8 @@
                     <br>
                     <br>
                     <button type="button" id="on" onclick="change()">Generate img</button>
-                    <button type="button" id="sn">Download img</button>
-                    <span id="er" ></span>
+                    <button type="button" id="sn">Download</button>
+                    <span id="er"></span>
                  
                     
                 </div>
@@ -125,8 +124,9 @@
         <div class="container">
             <h1>Get Start Make Your Own Ai</h1>
             <p>Enter your meassge about what performing ai you want we will try that ai!</p>
-        
+                 
                 <form action="https://api.web3forms.com/submit" method="POST">
+                    
 
                     <input type="hidden" name="access_key" value="02029de9-c027-4649-b8f2-cb7eebfe047a">
                 
@@ -209,7 +209,7 @@
         <li> <a href="#about">About</a></li>
         <li><a href="#ai">AI</a></li>
         <li><a href="#con">Contact</a>  </li>
-        <li><a href="red.html" id="left">Sign In</a></li>
+        <li><a href="#sign" id="left">Sign In</a></li>
     </div>
 
 </div>
@@ -352,7 +352,7 @@
     
     if(hours >=14){
     
-     ch.innerHTML = "Good Afternoon";
+     ch.innerHTML = "Good Evening";
     
     }
     else{
@@ -376,19 +376,27 @@
     
     
         function checkname(){
-            let name=document.getElementById("nameone").value
+            let name=document.getElementById("nameone").value.trim()
             if(name==""){
-                texterror.innerHTML="please enter anything";
+                texterror.innerHTML="please enter anything &#9888;";
                 texterror.style .color="red";
                 namestyle.style.border="1px solid red";
-                namestyle.style.boxShadow="1px 1px 6px red"
+                namestyle.style.boxShadow="1px 1px 6px red";
                 return false
                 sub.type="button";
         
             }
+            else if(name.length<5){
+                texterror.innerHTML="please enter Atleast 5 characters &#9888;";
+                texterror.style .color="red";
+                namestyle.style.border="1px solid red";
+                namestyle.style.boxShadow="1px 1px 6px red";
+                return false
+                sub.type="button";
+            }
             
-           if(!name.match(/^[A-Za-z]+$/)){
-                texterror.innerHTML="invalid !!";
+           else if(!name.match(/^[A-Za-z]+$/)){
+                texterror.innerHTML="invalid !! &#9888;";
                 texterror.style.color="red";
                 namestyle.style.border="1px solid red";
                 namestyle.style.boxShadow="1px 1px 6px red"
@@ -396,7 +404,7 @@
                 return false
             }
             else{
-                texterror.innerHTML="Good Value";
+                texterror.innerHTML="Good Value &#10003;";
                 texterror.style .color="green";
                 namestyle.style.border="1px solid #29f700";
                 namestyle.style.boxShadow="1px 1px 6px #29f700"
@@ -409,7 +417,7 @@
             let email=document.getElementById("emailone").value
           
             if(email==""){
-                emialerror.innerHTML="please enter anything";
+                emialerror.innerHTML="please enter anything &#9888;";
                 emialerror.style .color="red";
                 emailstyle.style.border="1px solid red";
                 emailstyle.style.boxShadow="1px 1px 6px red"
@@ -419,7 +427,7 @@
             }
                 
            if(!email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-            emialerror.innerHTML="invalid Email !!";
+            emialerror.innerHTML="please enter valid email !! &#9888;";
             emialerror.style.color="red";
             emailstyle.style.border="1px solid red";
             emailstyle.style.boxShadow="1px 1px 6px red"
@@ -429,7 +437,7 @@
             
             else{
                 emialerror.innerHTML="Good Value";
-                emialerror.style .color="green";
+                emialerror.style .color="green &#10003;";
                 emailstyle.style.border="1px solid #29f700";
                 emailstyle.style.boxShadow="1px 1px 6px #29f700"
                 sub.type="submit";
@@ -443,7 +451,7 @@
             let req=35;
             let distace = req-meassage.length;
             if(distace>0){
-                msgerror.innerHTML=`YOUR REQURID VALUE ${distace} `;
+                msgerror.innerHTML=`&#9888; YOUR REQURID VALUE ${distace} `;
                 msgerror.style .color="red";
                 msgstyle.style.border="1px solid red";
                 msgstyle.style.boxShadow="1px 1px 6px red";
@@ -454,7 +462,7 @@
             }
         
             else{
-                msgerror.innerHTML="Good Value";
+                msgerror.innerHTML=" &#10003; Good Value";
                 msgerror.style .color="green";
                 msgstyle.style.border="1px solid #29f700";
                 msgstyle.style.boxShadow="1px 1px 6px #29f700";
@@ -467,7 +475,7 @@
             
     
         if(!checkname() || !checkemail() || !checkmsg()){
-        allcheck.innerHTML="Please fix the  Errors";
+        allcheck.innerHTML="Please fix the  Errors  &#x21b9;";
         allcheck.style.color="red";
         setTimeout(function(){
             allcheck.innerHTML="";
@@ -482,13 +490,16 @@
      
         
        
-    }) 
+    })
+     
+  
   
     
     gsap.from(".main" , {duration:1,y:"-100%",ease:"bounce"})
     </script>
 
 <style>
+  
     nav{
         width:100%;
         height: 65px;
@@ -707,11 +718,11 @@
    .con input,textarea{
     margin: 10px;
     width: 65%;
-    padding: 20px 24px;
+    padding: 20px 20px;
     border: none;
     outline: none;
     background: transparent;
-    border: 1px solid #ccc;
+    border: 1px solid #181818;
     border-radius: 20px;
     
 
@@ -881,7 +892,17 @@
         top:4%;
 
     }
+   .ab{
+    margin-top: 90px;
 
+
+   }
+   .ab h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+   }
+   .ab img{
+    display: none;
+   }
 
    }
 
