@@ -18,7 +18,12 @@
 <body>
 
 
+ 
+ 
+
     <header id="header" class="header">
+      
+
         <nav id="nav" class="nav" >
             <div class="lgo" style="cursor:pointer">
                 <h2 id="changecolor">A.I</h2>
@@ -39,6 +44,8 @@
                 <img src="https://cdn.icon-icons.com/icons2/2582/PNG/512/menu_icon_153999.png" alt="menu" width="45" height="45" id="menu">
             </div>
         </nav>
+
+      
         
         <div class="main" id="main">
             <div class="container">
@@ -122,7 +129,7 @@
     <div class="con" id="con">
         <div class="form">
         <div class="container">
-            <h1>Get Start Make Your Own Ai</h1>
+            <h1>Let's Bulid AI Tools From Here</h1>
             <p>Enter your meassge about what performing ai you want we will try that ai!</p>
                  
                 <form action="https://api.web3forms.com/submit" method="POST">
@@ -202,7 +209,10 @@
             </div>
         </div>
     </div>
+    
 
+   
+  
 <div class="mainphone">
     <div class="forphone" id="phone">
         <li><a href="#main"> Home</a> </li>
@@ -214,6 +224,9 @@
 
 </div>
    
+
+
+
 </body>
 </html>
 <script>
@@ -266,7 +279,7 @@
             update()
         }
         else{
-            img.src="https://cdn.dribbble.com/users/543574/screenshots/4824123/ezgif.com-video-to-gif.gif";
+            img.src="https://i.pinimg.com/originals/6b/e0/89/6be0890f52e31d35d840d4fe2e10385b.gif";
             setTimeout(function(){
                 img.src="https://source.unsplash.com/random/200*200/?" + prom.value;
             },1000)
@@ -310,13 +323,6 @@
    
     
    })
-    
-
-    
-    
-    
-    
-    
     
     prom.addEventListener("keypress", function(event) {
      
@@ -436,8 +442,8 @@
         }
             
             else{
-                emialerror.innerHTML="Good Value";
-                emialerror.style .color="green &#10003;";
+                emialerror.innerHTML="Good Value &#10003;";
+                emialerror.style .color="green";
                 emailstyle.style.border="1px solid #29f700";
                 emailstyle.style.boxShadow="1px 1px 6px #29f700"
                 sub.type="submit";
@@ -471,9 +477,10 @@
             }
         }
     
+        
     sub.addEventListener("click" , function(){
-            
-    
+        let loadloadim = document.getElementById("loadloadim")
+      
         if(!checkname() || !checkemail() || !checkmsg()){
         allcheck.innerHTML="Please fix the  Errors  &#x21b9;";
         allcheck.style.color="red";
@@ -483,17 +490,20 @@
         return false;
         }
         else{
+           
+                return true;
             
-            return true;
+            
         }
     
      
         
        
     })
-     
+ 
   
-  
+   
+ 
     
     gsap.from(".main" , {duration:1,y:"-100%",ease:"bounce"})
     </script>
@@ -503,7 +513,6 @@
     nav{
         width:100%;
         height: 65px;
-       
         display: flex;
         justify-content: space-between;
         position: fixed;
@@ -788,8 +797,21 @@
 
    }
     
+   .cont{
+    position: fixed;
+    top:45%;
+    left:20%;
+    transform: translateX(-50%,-50%);
+    background-color: #ffffff;
+    padding: 20px 20px;
+    color: #000000;
+    box-shadow: 5px 6px 10px #000;
+    display: none;
+
+   }
   
- 
+   
+  
 
    @media (max-width:700px) {
     body{
